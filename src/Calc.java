@@ -16,6 +16,7 @@ public class Calc{
 
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("Введите выражение для расчета в формате 2 + 2, для завершения работы введите \"!\"");
         while (!sc.hasNext("e")) {
             str = sc.nextLine().replaceAll("\\s", "");
 
@@ -24,7 +25,7 @@ public class Calc{
                 operation = str.replaceAll("\\w", "").charAt(0);
 
                 if (!str.matches("[0-9|IVXLC]{1,3}+(\\+|\\-|\\*|\\/)+[0-9|IVXLC]{1,3}")) {
-                    throw new formatOfInputException("Формат введенных данных не соответствуют условиям задачи, требуемый формат: Операнд1 действие Операнд2");
+                    throw new formatOfInputException("Формат введенных данных не соответствуют условиям задачи, требуемый формат: Операнд1 +,-,/,* Операнд2");
                 }
 
 
