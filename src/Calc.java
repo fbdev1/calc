@@ -8,12 +8,9 @@ public class Calc {
                 super(msg);
             }
         }
-
-
         String[] arrayOfOperands;
         String str;
         char operation;
-
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите выражение для расчета в формате 2 + 2, для завершения работы введите \"!\"");
