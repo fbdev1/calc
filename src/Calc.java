@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 
 public class Calc{
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         class formatOfInputException extends IndexOutOfBoundsException {
             formatOfInputException(String msg) {
                 super(msg);
@@ -10,14 +10,15 @@ public class Calc{
         }
 
 
-        String[] arrayOfOperands = new String[2];
+        String[] arrayOfOperands;
         String str;
-        char operation = ' ';
+        char operation;
 
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите выражение для расчета в формате 2 + 2, для завершения работы введите \"!\"");
-        while (!sc.hasNext("e")) {
+        while (!sc.hasNext("!")) {
+
             str = sc.nextLine().replaceAll("\\s", "");
 
             try {
