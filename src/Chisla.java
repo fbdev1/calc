@@ -4,7 +4,7 @@ public abstract class Chisla {
 
     char dejstvie;
 
-    int otvet(){
+    int otvet() {
 
         switch (dejstvie) {
             case '+':

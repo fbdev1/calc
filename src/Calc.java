@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class Calc{
+public class Calc {
     public static void main(String[] args) {
         class formatOfInputException extends IndexOutOfBoundsException {
             formatOfInputException(String msg) {
@@ -30,21 +30,20 @@ public class Calc{
                 }
 
 
-
-            if (Character.isDigit(str.charAt(0))) {
-                Arabiс ar = new Arabiс(Integer.parseInt(arrayOfOperands[0]), Integer.parseInt(arrayOfOperands[1]), operation);
-                System.out.println(ar.otvet());
-            } else {
-                Roman ro = new Roman(arrayOfOperands, operation);
-                System.out.println(RomanNumeral.arabicToRoman(ro.otvet()));
-            }
+                if (Character.isDigit(str.charAt(0))) {
+                    Arabiс ar = new Arabiс(Integer.parseInt(arrayOfOperands[0]), Integer.parseInt(arrayOfOperands[1]), operation);
+                    System.out.println(ar.otvet());
+                } else {
+                    Roman ro = new Roman(arrayOfOperands, operation);
+                    System.out.println(RomanNumeral.arabicToRoman(ro.otvet()));
+                }
             } catch (formatOfInputException e) {
                 System.out.println(e.getMessage());
             } catch (StringIndexOutOfBoundsException e) {
                 System.out.println("Формат введенных данных не соответствуют условиям задачи, требуемый формат: Операнд1 действие Операнд2");
             }
         }
-sc.close();
+        sc.close();
     }
 
 
