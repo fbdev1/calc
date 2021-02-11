@@ -11,7 +11,7 @@ public class Calc {
         String[] arrayOfOperands;
         String str;
         char operation;
-
+//123
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите выражение для расчета в формате 2 + 2, для завершения работы введите \"!\"");
         while (!sc.hasNext("!")) {
